@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.stand.twademo",
+    "sha256_cert_fingerprints":
+    ["A8:FD:F2:5A:2E:CE:33:CF:D0:E8:F9:7A:23:93:52:DF:E5:51:52:65:98:E7:AB:38:5F:E5:BB:D2:6A:89:87:AB"]
+  }
+}]
