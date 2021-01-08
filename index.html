@@ -35,7 +35,7 @@
                     isdirty : 0
                 };
                 console.log(data);
-                console.log('DNS查询耗时 ：' + (timing.domainLookupEnd - timing.domainLookupStart));
+                console.log('DNS查询耗时 ：' + timing.domainLookupEnd + ' ' + timing.domainLookupStart);
                 console.log('TCP链接耗时 ：' + (timing.connectEnd - timing.connectStart));
                 console.log('request请求耗时 ：' + (timing.responseEnd - timing.responseStart));
                 console.log('解析dom树耗时 ：' + (timing.domComplete - timing.domInteractive));
