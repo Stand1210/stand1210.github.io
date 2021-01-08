@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script>
+	
+</head>
+<body>
+<header>
+	<p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
+</header>
+<main>
+	<h1>Hello stand</h1>
+</main>
+<footer>
+	<p>&copy; js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
+</footer>
+<script>
         window.onload = function(){
             setTimeout(function(){
                 let t = performance.timing
@@ -19,22 +31,5 @@
             })
         }
 	</script>
-</head>
-<body>
-<header>
-	<p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
-</header>
-<main>
-	<h1>Hello stand</h1>
-</main>
-<footer>
-	<p>&copy; js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
-</footer>
-<script>
-	window.addEventListener("beforeinstallprompt", function(e) { 
-// log the platforms provided as options in an install prompt 
-	  alert("[EVENT]beforeinstallprompt received!"); // e.g., ["web", "android", "windows"] 
-	});
-</script>
 </body>
 </html>
