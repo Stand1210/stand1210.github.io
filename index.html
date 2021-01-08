@@ -35,16 +35,16 @@
                     isdirty : 0
                 };
                 console.log(data);
-                console.log('DNS查询耗时 ：' + (timing.domainLookupEnd - timing.domainLookupStart).toFixed(0))
-                console.log('TCP链接耗时 ：' + (timing.connectEnd - timing.connectStart).toFixed(0))
-                console.log('request请求耗时 ：' + (timing.responseEnd - timing.responseStart).toFixed(0))
-                console.log('解析dom树耗时 ：' + (timing.domComplete - timing.domInteractive).toFixed(0))
-                console.log('白屏时间 ：' + (timing.responseStart - timing.navigationStart).toFixed(0))
-                console.log('domready时间 ：' + (timing.domContentLoadedEventEnd - timing.navigationStart).toFixed(0))
-                console.log('onload时间 ：' + (timing.loadEventEnd - timing.navigationStart).toFixed(0))
+                console.log('DNS查询耗时 ：' + (timing.domainLookupEnd - timing.domainLookupStart).toFixed(0));
+                console.log('TCP链接耗时 ：' + (timing.connectEnd - timing.connectStart).toFixed(0));
+                console.log('request请求耗时 ：' + (timing.responseEnd - timing.responseStart).toFixed(0));
+                console.log('解析dom树耗时 ：' + (timing.domComplete - timing.domInteractive).toFixed(0));
+                console.log('白屏时间 ：' + (timing.responseStart - timing.navigationStart).toFixed(0));
+                console.log('domready时间 ：' + (timing.domContentLoadedEventEnd - timing.navigationStart).toFixed(0));
+                console.log('onload时间 ：' + (timing.loadEventEnd - timing.navigationStart).toFixed(0));
 
                 if(timing = performance.memory){
-                    console.log('js内存使用占比 ：' + (timing.usedJSHeapSize / timing.totalJSHeapSize * 100).toFixed(2) + '%')
+                    console.log('js内存使用占比 ：' + (timing.usedJSHeapSize / timing.totalJSHeapSize * 100).toFixed(2) + '%');
                 }
 
                 }
