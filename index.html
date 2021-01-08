@@ -43,7 +43,7 @@
                 console.log('domready时间 ：' + (timing.domContentLoadedEventEnd - timing.navigationStart).toFixed(0))
                 console.log('onload时间 ：' + (timing.loadEventEnd - timing.navigationStart).toFixed(0))
 
-                if(t = performance.memory){
+                if(timing = performance.memory){
                     console.log('js内存使用占比 ：' + (timing.usedJSHeapSize / timing.totalJSHeapSize * 100).toFixed(2) + '%')
                 }
 
