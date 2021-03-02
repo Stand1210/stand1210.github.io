@@ -1,55 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+	<meta charset="utf-8">
+	<title>js13kGames A-Frame entries</title>
+	<meta name="description" content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps.">
+	<meta name="author" content="end3r">
+	<meta name="theme-color" content="#B12A34">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" content="icons/icon-512.png">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="js13kpwa.webmanifest">
+	<script src="data/games.js" defer></script>
+	<script src="app.js" defer></script>
+
 </head>
 <body>
 <header>
-    <p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
+	<p><a class="logo" href="http://js13kgames.com"><img src="img/js13kgames.png" alt="js13kGames"></a></p>
 </header>
 <main>
-    <h1>Hello stand</h1>
+	<h1>js13kGames A-Frame entries</h1>
+	<p class="description">List of games submitted to the <a href="http://js13kgames.com/aframe">A-Frame category</a> in the <a href="http://2017.js13kgames.com">js13kGames 2017</a> competition. You can <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa">fork js13kPWA on GitHub</a> to check its source code.</p>
+	<button id="notifications">Request dummy notifications</button>
+	<section id="content"></section>
 </main>
 <footer>
-    <p>&copy; js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
+	<p>&copy; js13kGames 2012-2018, created and maintained by <a href="http://end3r.com">Andrzej Mazur</a> from <a href="http://enclavegames.com">Enclave Games</a>.</p>
 </footer>
 <script>
-        window.onload = function(){
-            if (window.performance || window.webkitPerformance) {
-        var perf = window.performance || window.webkitPerformance;
-        var timing = perf.timing;
-        var navi = perf.navigation;
-        var timer = setInterval(function() {
-            if (0 !== timing.loadEventEnd) {
-                clearInterval(timer);
-                var data = {
-                    url: window.location.href,
-                    ua: window.navigator.userAgent,
-                    dns :timing.domainLookupEnd - timing.domainLookupStart,
-                    tcp :timing.connectEnd - timing.connectStart,
-                    request : timing.responseEnd -timing.responseStart,
-                    blank : timing.domLoading - timing.fetchStart,
-                    domready : timing.domContentLoadedEventEnd - timing.fetchStart,
-                    onload : timing.loadEventEnd - timing.fetchStart,
-                    firstimagetime : 0,
-                    isdirty : 0
-                };
-                console.log(data);
-                console.log('DNS查询耗时 ：' + (timing.domainLookupEnd - timing.domainLookupStart).toFixed(0))
-                console.log('TCP链接耗时 ：' + (timing.connectEnd - timing.connectStart).toFixed(0))
-                console.log('request请求耗时 ：' + (timing.responseEnd - timing.responseStart).toFixed(0))
-                console.log('解析dom树耗时 ：' + (timing.domComplete - timing.domInteractive).toFixed(0))
-                console.log('白屏时间 ：' + (timing.responseStart - timing.navigationStart).toFixed(0))
-                console.log('domready时间 ：' + (timing.domContentLoadedEventEnd - timing.navigationStart).toFixed(0))
-                console.log('onload时间 ：' + (timing.loadEventEnd - timing.navigationStart).toFixed(0))
-
-                if(timing = performance.memory){
-                    console.log('js内存使用占比 ：' + (timing.usedJSHeapSize / timing.totalJSHeapSize * 100).toFixed(2) + '%')
-                }
-
-                }
-                })
-        }}
-    </script>
+	window.addEventListener("beforeinstallprompt", function(e) { 
+// log the platforms provided as options in an install prompt 
+	  alert("[EVENT]beforeinstallprompt received!"); // e.g., ["web", "android", "windows"] 
+	});
+</script>
 </body>
 </html>
